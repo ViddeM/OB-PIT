@@ -1,0 +1,1 @@
+### This is an insulting display of how browser plugins can screw you over like a badger on Friday night
