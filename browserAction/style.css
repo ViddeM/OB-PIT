@@ -1,3 +1,15 @@
 h1 {
   font-style: italic;
 }
+
+.addInputForm {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkInput {
+  flex-grow: 1;
+  margin-right: 7px;
+}
