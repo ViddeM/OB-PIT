@@ -1,24 +1,64 @@
 @import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
 
 body {
-    background-color: #7d90c0;
+  background-color: #7d90c0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  font-family: lobster;
+  color: #f0f0f0;
+  text-shadow: 1px 1px black;
+  text-align: center;
+}
+
+.fill {
+  flex-grow: 1;
 }
 
 .centerText {
-    font-family: lobster;
-    color: #f0f0f0;
-    text-shadow: 1px 1px black;
-    text-decoration: underline;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
 }
 
 .insultText {
-    font-size: xxx-large;
-    font-weight: bold;
-    max-width: 80%;
-    text-align: center;
+  font-size: xxx-large;
+  font-weight: 400;
+  max-width: 80%;
+}
+
+.reloadText {
+  font-size: x-large;
+}
+
+.reloadButton {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.spinning {
+  animation: rotation;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1080deg);
+  }
+}
+
+.githubIcon {
+  height: 1em;
+  width: 1em;
 }

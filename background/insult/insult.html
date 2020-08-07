@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link href="style.css" rel="stylesheet" />
-        <script src="insult.js"></script>
-    </head>
-    <body>
-        <div class="centerText">
-            <h1 id="myHeading">The great insulter 3.0 greets you with:</h1>
-            <p class="insultText" id="insult">Loadng insult...</p>
-        </div>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="insult.js"></script>
+  </head>
+  <body>
+    <div class="centerText">
+      <h1>The great insulter 3.0 greets you with:</h1>
+      <p class="insultText" id="insult">Loading insult...</p>
+    </div>
+    <div>
+      <p class="reloadText">
+        You don't feel insulted enough? <br />
+        Click to refresh the insult..
+      </p>
+      <button
+        id="reloadButton"
+        class="reloadButton"
+        onclick="animate() && setInsult()"
+      >
+        <img src="/icons/reload.png" alt="reload-button" />
+      </button>
+    </div>
+    <div class="fill"></div>
+    <footer class="footer">
+      <p>
+        <img src="/icons/github.png" class="githubIcon" alt="github-icon" />
+        Anything you're missing? Create an issue or PR on
+        <a href="https://github.com/ViddeM/OB-PIT">github</a>
+      </p>
+    </footer>
+  </body>
 </html>
