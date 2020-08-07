@@ -1,15 +1,131 @@
-h1 {
-  font-style: italic;
+:root {
+    --input-color: #99A3BA;
+    --input-border: #CDD9ED;
+    --input-background: #fff;
+    --input-placeholder: #CBD1DC;
+
+    --input-border-focus: #275EFE;
+
+    --group-color: var(--input-color);
+    --group-border: var(--input-border);
+    --group-background: #EEF4FF;
+
+    --group-color-focus: #fff;
+    --group-border-focus: var(--input-border-focus);
+    --group-background-focus: #678EFE;
+}
+
+html * {
+    font-family: "Inconsolata", monospace;
+}
+
+h2 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.titleBar {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    background-color: #175ddc;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.whiteText {
+    color: white;
 }
 
 .addInputForm {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
 
 .linkInput {
-  flex-grow: 1;
-  margin-right: 7px;
+    flex-grow: 1;
+    margin-right: 10px;
+    color: black;
+    border-radius: 1px;
+    box-shadow: none;
+    border: 1px solid black;
 }
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+    min-width: 380px;
+    max-width: 380px;
+}
+
+.url-input-form-field {
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-appearance: none;
+
+    flex-grow: 1;
+    border: 1px solid var(--input-border);
+    border-radius: 0px;
+}
+.url-input-form-field:focus {
+    outline: none;
+    border-color: var(--input-border-focus);
+}
+
+
+.url-input-form-group {
+    flex-grow: 1;
+    margin-right: 10px;
+    display: flex;
+}
+
+.url-input-form-group > span, .url-input-form-group > button, .url-input-form-group .url-input-form-field {
+    white-space: nowrap;
+    display: block;
+}
+
+.url-input-form-group > span:not(:first-child):not(:last-child), .url-input-form-group .url-input-form-group > button:not(:first-child):not(:last-child) {
+    border-radius: 0;
+}
+.url-input-form-group > span:first-child, .url-input-form-group .url-input-form-field:first-child {
+    border-radius: 6px 0 0 6px;
+}
+.url-input-form-group > span:last-child, .url-input-form-group .url-input-form-field:last-child {
+    border-radius: 0 6px 6px 0;
+}
+.url-input-form-group > span:not(:first-child), .url-input-form-group .url-input-form-field:not(:first-child) {
+    margin-left: -1px;
+}
+.url-input-form-group .url-input-form-field {
+    position: relative;
+    z-index: 1;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.url-input-form-group > span {
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 25px;
+    color: var(--group-color);
+    background: var(--group-background);
+    border: 1px solid var(--group-border);
+    transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+.url-input-form-group:focus-within > span {
+    color: var(--group-color-focus);
+    background: var(--group-background-focus);
+    border-color: var(--group-border-focus);
+}
+
+
+
+

@@ -3,6 +3,13 @@ const domainMatcher = RegExp(
     "gu"
 );
 
+const reset = false;
+if (reset) {
+    browser.storage.sync.set({
+        list: [],
+    });
+}
+
 function addToStorage(domain) {
     readDomains((storage) => {
         let list = storage.list;
@@ -20,8 +27,6 @@ function addToStorage(domain) {
 function readDomains(func) {
     browser.storage.sync.get().then(func);
 }
-
-document.getElementById("myHeading").style.color = "red";
 
 document
     .getElementById("addWebsiteSubmit")

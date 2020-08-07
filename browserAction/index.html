@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link href="style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <h1 id="myHeading">The great insulter 2.0</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <link href="style.css" rel="stylesheet" />
+        <link
+            href="175https://fonts.googleapis.com/css2?family=Inconsolata&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="titleBar">
+            <h2 class="whiteText" id="myHeading">The great insulter 2.0</h2>
+        </div>
 
-    <p id="currentDomain"></p>
+        <p id="currentDomain"></p>
 
-    <div class="addInputForm">
-      <input class="linkInput" id="linkInput" />
-      <button id="addWebsiteSubmit">
-        +
-      </button>
-    </div>
-    <script src="script.js"></script>
-  </body>
+        <div class="addInputForm">
+            <div class="url-input-form-group">
+                <span>https://</span>
+                <input
+                    class="url-input-form-field"
+                    type="text"
+                    placeholder="domain.tld"
+                />
+                <button>
+                    +
+                </button>
+            </div>
+
+            <!-- <input class="linkInput" id="linkInput" /> -->
+<!--            <button id="addWebsiteSubmit">-->
+<!--                +-->
+<!--            </button>-->
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
