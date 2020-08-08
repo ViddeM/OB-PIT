@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <link href="style.css" rel="stylesheet" />
-    <script src="insult.js"></script>
   </head>
   <body>
     <div class="centerText">
@@ -15,12 +14,8 @@
         You don't feel insulted enough? <br />
         Click to refresh the insult..
       </p>
-      <button
-        id="reloadButton"
-        class="reloadButton"
-        onclick="animate() && setInsult()"
-      >
-        <img src="/icons/reload.png" alt="reload-button" />
+      <button id="reloadButton" class="reloadButton">
+        <img src="/icons/loading.png" alt="reload-button" class="smallImage" />
       </button>
     </div>
     <div class="fill"></div>
@@ -31,5 +26,6 @@
         <a href="https://github.com/ViddeM/OB-PIT">github</a>
       </p>
     </footer>
+    <script src="insult.js"></script>
   </body>
 </html>

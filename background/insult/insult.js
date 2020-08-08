@@ -4,12 +4,25 @@ document.getElementById("reloadButton").addEventListener("click", setInsult);
 document.getElementById("reloadButton").addEventListener("click", ani);
 
 function ani() {
-  console.log("ANIMATION");
-  document.getElementById("reloadButton").className = "spinning";
+  var element = document.getElementById("reloadButton");
+  element.animate(
+    [
+      // keyframes
+      { transform: "rotate(0deg)" },
+      { transform: "rotate(360deg)" },
+    ],
+    {
+      // timing options
+      duration: 1000,
+      iterations: 1,
+      easing: "ease-in-out",
+    }
+  );
+
+  //element.classList.add("spinning");
 }
 
 function setInsult() {
-  console.log("Händer något??");
   window
     .fetch("https://evilinsult.com/generate_insult.php?lang=en&type=json")
     .then((response) => {

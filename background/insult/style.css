@@ -23,6 +23,7 @@ body {
   justify-content: center;
   align-items: center;
   text-decoration: underline;
+  transition: height 0.3s ease-out;
 }
 
 .insultText {
@@ -40,22 +41,13 @@ body {
   border: none;
   background: none;
   cursor: pointer;
+  height: 64px;
+  width: 64px;
 }
 
-.spinning {
-  animation: rotation;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(1080deg);
-  }
+.smallImage {
+  height: 100%;
+  width: 100%;
 }
 
 .githubIcon {
