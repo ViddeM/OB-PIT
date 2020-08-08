@@ -1,13 +1,13 @@
 const domainMatcher = RegExp(
-  /^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}$/,
+  /^(?:https?:)?(?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n]+)/,
   "gu"
 );
 
 const reset = false;
 if (reset) {
-    browser.storage.sync.set({
-        list: [],
-    });
+  browser.storage.sync.set({
+    list: [],
+  });
 }
 
 function addToStorage(domain) {
