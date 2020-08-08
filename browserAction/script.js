@@ -10,12 +10,18 @@ if (reset) {
     });
 }
 
+let domainErrors = "";
+setDomainErrors();
+
 function addToStorage(domain) {
     readDomains((storage) => {
         let list = storage.list;
         console.log("OLDLIST", list);
         if (list.includes(domain) === false) {
             list.push(domain);
+        } else {
+            domainErrors = "Domain already added!";
+            return;
         }
         console.log("NEWLIST", list);
         browser.storage.sync.set({
@@ -38,7 +44,17 @@ function onClickPrint() {
     if (matches !== null) {
         console.log("MATCHES", matches);
         addToStorage(matches[0]);
+        setDomainErrors();
     } else {
         console.log("no matches for ", value);
+    }
+}
+
+function setDomainErrors() {
+    if (domainErrors && domainErrors.length > 0) {
+        document.getElementById("errorCard").style.display = "";
+        document.getElementById("errorText").textContent = domainErrors;
+    } else {
+        document.getElementById("errorCard").style.display = "none";
     }
 }

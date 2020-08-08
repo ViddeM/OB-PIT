@@ -14,7 +14,9 @@
         </div>
 
         <p id="currentDomain"></p>
-
+        <div class="errorCard" id="errorCard">
+            <p class="errorText" id="errorText"></p>
+        </div>
         <div class="addInputForm">
             <div class="url-input-form-group">
                 <span>https://</span>
@@ -22,16 +24,13 @@
                     class="url-input-form-field"
                     type="text"
                     placeholder="domain.tld"
+                    id="linkInput"
                 />
-                <button>
-                    +
+
+                <button id="addWebsiteSubmit" class="addWebsiteSubmit">
+                    add
                 </button>
             </div>
-
-            <!-- <input class="linkInput" id="linkInput" /> -->
-<!--            <button id="addWebsiteSubmit">-->
-<!--                +-->
-<!--            </button>-->
         </div>
         <script src="script.js"></script>
     </body>
